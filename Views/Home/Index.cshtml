@@ -1,0 +1,55 @@
+﻿@model IEnumerable<demo_02.Models.Product>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Room.NameRoom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameProduct)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dimension)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Materials)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Color)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Room.NameRoom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameProduct)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dimension)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Materials)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+
+                @Html.ActionLink("Details", "Details", "Products", new { id = item.IdProduct }, null)
+
+            </td>
+        </tr>
+    }
+
+</table>
