@@ -9,28 +9,26 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Nội Thất", "Index", "Products", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
-                    @*<li>@Html.ActionLink("About", "About", "Home")</li>
-        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
-
-                    @*<li> @Html.ActionLink("Room", "Index", "Rooms")</li>
-                    <li> @Html.ActionLink("Product", "Index", "Products")</li>*@
-                </ul>
-                @*@Html.Partial("_LoginPartial")*@
+    <div id="masthead" class="site-header" role="banner">
+        <div class="site-branding">
+            <div class="header-logo">
+                <img src="~/Content/Images/logo.png" alt="Image Logo" />
             </div>
         </div>
+    </div>
+    <div class="primary-nav-container">
+        <nav id="primary-nav" class="primary-nav" role="navigation">
+            @*<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">Primary Menu</button>*@
+            <div class="menu-top-container">
+                <ul id="primary-menu" class="menu">
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-30172"><a href="https://www.style-files.com" aria-current="page">HOME</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30169"><a href="https://www.style-files.com/about/">ABOUT</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30295"><a href="https://www.style-files.com/shop/">CONTACT</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31366">@Html.ActionLink("Products","Index","Products")</li>
+                </ul>
+            </div>
+        </nav>
+
     </div>
     <div class="container body-content">
         @RenderBody()

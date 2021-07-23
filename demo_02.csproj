@@ -186,6 +186,14 @@
     <Compile Include="Migrations\202107181554485_CreateTable.Designer.cs">
       <DependentUpon>202107181554485_CreateTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202107230907425_UpdateImages.cs" />
+    <Compile Include="Migrations\202107230907425_UpdateImages.Designer.cs">
+      <DependentUpon>202107230907425_UpdateImages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107231123254_UpdateImages_1.cs" />
+    <Compile Include="Migrations\202107231123254_UpdateImages_1.Designer.cs">
+      <DependentUpon>202107231123254_UpdateImages_1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -200,10 +208,15 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\SofaMiami.jpg" />
+    <Content Include="Content\Images\SofaMiami_2.jpg" />
+    <Content Include="Content\Images\SofaMiami_3.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\Images\ChairROOT.png" />
+    <Content Include="Content\Images\logo.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\Admin\Views\web.config" />
@@ -230,6 +243,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\scripts.js" />
+    <Content Include="Scripts\scripts2.js" />
+    <Content Include="Scripts\scripts3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -267,10 +283,8 @@
     <Content Include="Views\Rooms\Details.cshtml" />
     <Content Include="Views\Rooms\Edit.cshtml" />
     <Content Include="Views\Rooms\Index.cshtml" />
-    <Content Include="Views\Products\Create.cshtml" />
-    <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Shared\_Layout - Copy.cshtml" />
     <Content Include="Views\Products\Details.cshtml" />
-    <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -296,6 +310,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202107181554485_CreateTable.resx">
       <DependentUpon>202107181554485_CreateTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107230907425_UpdateImages.resx">
+      <DependentUpon>202107230907425_UpdateImages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107231123254_UpdateImages_1.resx">
+      <DependentUpon>202107231123254_UpdateImages_1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

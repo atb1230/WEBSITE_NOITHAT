@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -18,7 +19,9 @@ namespace demo_02.Areas.Admin.Controllers
         public ActionResult Index()
         {
             var products = db.Products.Include(p => p.Room);
+          
             return View(products.ToList());
+            
         }
 
         // GET: Admin/Products/Details/5
@@ -40,7 +43,8 @@ namespace demo_02.Areas.Admin.Controllers
         public ActionResult Create()
         {
             ViewBag.IdRoom = new SelectList(db.Rooms, "IdRoom", "NameRoom");
-            return View();
+            Product pro = new Product();
+            return View(pro);
         }
 
         // POST: Admin/Products/Create
@@ -48,8 +52,37 @@ namespace demo_02.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IdProduct,NameProduct,Dimension,Materials,Color,IdRoom")] Product product)
+        public ActionResult Create([Bind(Include = "IdProduct,NameProduct,Dimension,Materials,Color,Price,IdRoom,Picture1,Picture2,Picture3")] Product product)
         {
+            if(product.ImageUpload!=null )
+            {
+                string fileName = Path.GetFileNameWithoutExtension(product.ImageUpload.FileName);
+                string extension = Path.GetExtension(product.ImageUpload.FileName);
+                fileName = fileName + extension;
+                product.Picture1 = "~/Content/images/" + fileName;
+                product.ImageUpload.SaveAs(Path.Combine(Server.MapPath("~/Content/images/"), fileName));
+               
+            }
+  
+            if(product.ImageUpload2!=null)
+            {
+                string fileName = Path.GetFileNameWithoutExtension(product.ImageUpload2.FileName);
+                string extension = Path.GetExtension(product.ImageUpload2.FileName);
+                fileName = fileName + extension;
+                product.Picture2 = "~/Content/images/" + fileName;
+                product.ImageUpload2.SaveAs(Path.Combine(Server.MapPath("~/Content/images/"), fileName));
+            }
+
+            if (product.ImageUpload3 != null)
+            {
+                string fileName = Path.GetFileNameWithoutExtension(product.ImageUpload3.FileName);
+                string extension = Path.GetExtension(product.ImageUpload3.FileName);
+                fileName = fileName + extension;
+                product.Picture3 = "~/Content/images/" + fileName;
+                product.ImageUpload3.SaveAs(Path.Combine(Server.MapPath("~/Content/images/"), fileName));
+            }
+
+
             if (ModelState.IsValid)
             {
                 db.Products.Add(product);
@@ -82,7 +115,7 @@ namespace demo_02.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IdProduct,NameProduct,Dimension,Materials,Color,IdRoom")] Product product)
+        public ActionResult Edit([Bind(Include = "IdProduct,NameProduct,Dimension,Materials,Color,Price,IdRoom,Picture1,Picture2,Picture3")] Product product)
         {
             if (ModelState.IsValid)
             {

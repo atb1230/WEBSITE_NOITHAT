@@ -34,8 +34,39 @@ namespace demo_02.Models
         [Display(Name = "Màu Sắc")]
         public string Color { get; set; }
 
+        [Required]
+        [Display(Name ="Giá Tiền")]
+        public double Price { get; set; }
+
         [ForeignKey("Room")]
         public int IdRoom { get; set; }
         public Room Room { get; set; }
+
+        [Required]
+        [Display(Name ="Hình Ảnh")]
+        public string Picture1 { get; set; }
+
+        [Required]
+        [Display(Name ="Hình Ảnh 2")]
+        public string Picture2 { get; set; }
+        [Required]
+        [Display(Name ="Hình Ảnh 3")]
+        public string Picture3 { get; set; }
+        //-------------------------------------------
+        public Product()
+        {
+
+            Picture1 = "~/Content/images/logo.png";
+            Picture2 = "~/Content/images/logo.png";
+            Picture3 = "~/Content/images/logo.png";
+        }
+        [NotMapped]
+        public HttpPostedFileBase ImageUpload { get; set; }
+
+        [NotMapped]
+        public HttpPostedFileBase ImageUpload2 { get; set; }
+        [NotMapped]
+        public HttpPostedFileBase ImageUpload3 { get; set; }
+
     }
 }

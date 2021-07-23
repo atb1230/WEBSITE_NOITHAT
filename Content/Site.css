@@ -22,3 +22,62 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+container {
+    color: white;
+}
+.site-branding{
+    text-align:center;
+    margin: 2.3em 2.5em 3.4em 
+}
+.header-logo img{
+    max-height:196px;
+}
+#primary-menu {
+    list-style: none;
+    margin: 0 auto;
+
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin: 0 0 0.4em;
+    
+}
+
+.primary-nav-container {
+    background: #fff;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+.primary-nav li {
+    margin-right: 2em;
+    margin-left: 2em;
+    display: inline-table;
+    margin: 2px 4em;
+    box-sizing: inherit;
+}
+
+li {
+    display: list-item;
+}
+.primary-nav ul {
+    color: black;
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    font-size: 1em;
+}
+
+
+
+
+
