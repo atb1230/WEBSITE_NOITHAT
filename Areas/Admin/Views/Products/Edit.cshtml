@@ -70,6 +70,8 @@
             @Html.LabelFor(model => model.Picture1, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Picture1, new { htmlAttributes = new { @class = "form-control" } })
+                <img src="@Url.Content(Model.Picture1)" style="height:200px;width:200px;margin:10px;" id="previewImage1" />
+                <input type="file" name="ImageUpload1" onchange="ShowImagePreview_3(this, document.getElementById('previewImage1'))" />
                 @Html.ValidationMessageFor(model => model.Picture1, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -78,6 +80,8 @@
             @Html.LabelFor(model => model.Picture2, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Picture2, new { htmlAttributes = new { @class = "form-control" } })
+                <img src="@Url.Content(Model.Picture2)" style="height:200px;width:200px;margin:10px;" id="previewImage2" />
+                <input type="file" name="ImageUpload2" onchange="ShowImagePreview_3(this, document.getElementById('previewImage2'))" />
                 @Html.ValidationMessageFor(model => model.Picture2, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -86,7 +90,9 @@
             @Html.LabelFor(model => model.Picture3, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Picture3, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Picture3, "", new { @class = "text-danger" })
+                <img src="@Url.Content(Model.Picture3)" style="height:200px;width:200px;margin:10px;" id="previewImage3" />
+                <input type="file" name="ImageUpload3" onchange="ShowImagePreview_3(this, document.getElementById('previewImage3'))" />
+                @*@Html.ValidationMessageFor(model => model.Picture3, "", new { @class = "text-danger" })*@
             </div>
         </div>
 

@@ -5,23 +5,25 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<h2>Bed Room</h2>
+
 <table class="table">
     <tr>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.Room.NameRoom)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.NameProduct)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.Dimension)
-        </th>
-        <th>
+        </th>*@
+        @*<th>
             @Html.DisplayNameFor(model => model.Materials)
-        </th>
-        <th>
+        </th>*@
+        @*<th>
             @Html.DisplayNameFor(model => model.Color)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Price)
         </th>
@@ -39,21 +41,21 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.Room.NameRoom)
-        </td>
+        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.NameProduct)
         </td>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.Dimension)
-        </td>
-        <td>
+        </td>*@
+        @*<td>
             @Html.DisplayFor(modelItem => item.Materials)
-        </td>
-        <td>
+        </td>*@
+        @*<td>
             @Html.DisplayFor(modelItem => item.Color)
-        </td>
+        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.Price)
         </td>
@@ -67,8 +69,9 @@
             <img src="@Url.Content(item.Picture3)" height="100" width="100" />
         </td>
         <td>
-          @Html.ActionLink("Details", "Details", new { id=item.IdProduct })
-           
+            
+            @Html.ActionLink("Details", "Details", new { id=item.IdProduct })
+            
         </td>
     </tr>
 }

@@ -171,7 +171,10 @@
     <Compile Include="Areas\Admin\Controllers\ProductsController.cs" />
     <Compile Include="Areas\Admin\Controllers\RoomsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BedRoomController.cs" />
+    <Compile Include="Controllers\DiningRoomController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LivingRoomController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\RoomsController.cs" />
@@ -190,10 +193,6 @@
     <Compile Include="Migrations\202107230907425_UpdateImages.Designer.cs">
       <DependentUpon>202107230907425_UpdateImages.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202107231123254_UpdateImages_1.cs" />
-    <Compile Include="Migrations\202107231123254_UpdateImages_1.Designer.cs">
-      <DependentUpon>202107231123254_UpdateImages_1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -208,15 +207,25 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Images\SofaMiami.jpg" />
-    <Content Include="Content\Images\SofaMiami_2.jpg" />
-    <Content Include="Content\Images\SofaMiami_3.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Content\Images\ChairROOT.png" />
-    <Content Include="Content\Images\logo.png" />
+    <Content Include="Images\BanAnPorto.png" />
+    <Content Include="Images\BanAnPorto2.png" />
+    <Content Include="Images\BanAnPorto3.png" />
+    <Content Include="Images\GheAnCoque.png" />
+    <Content Include="Images\GheAnCoque2.png" />
+    <Content Include="Images\GheAnCoque3.png" />
+    <Content Include="Images\GiuongShadow.png" />
+    <Content Include="Images\GiuongShadow1.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\SofaMiami.png" />
+    <Content Include="Images\SofaMiami_2.jpg" />
+    <Content Include="Images\SofaMiami_3.jpg" />
+    <Content Include="Images\SofaOpera.png" />
+    <Content Include="Images\SofaOpera2.png" />
+    <Content Include="Images\SofaOpera3.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\Admin\Views\web.config" />
@@ -244,8 +253,6 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\scripts.js" />
-    <Content Include="Scripts\scripts2.js" />
-    <Content Include="Scripts\scripts3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -286,6 +293,12 @@
     <Content Include="Views\Shared\_Layout - Copy.cshtml" />
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\LivingRoom\Index.cshtml" />
+    <Content Include="Views\DiningRoom\Index.cshtml" />
+    <Content Include="Views\LivingRoom\Details.cshtml" />
+    <Content Include="Views\DiningRoom\Details.cshtml" />
+    <Content Include="Views\BedRoom\Index.cshtml" />
+    <Content Include="Views\BedRoom\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -313,9 +326,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202107230907425_UpdateImages.resx">
       <DependentUpon>202107230907425_UpdateImages.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202107231123254_UpdateImages_1.resx">
-      <DependentUpon>202107231123254_UpdateImages_1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

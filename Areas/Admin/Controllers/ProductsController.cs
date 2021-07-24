@@ -19,9 +19,7 @@ namespace demo_02.Areas.Admin.Controllers
         public ActionResult Index()
         {
             var products = db.Products.Include(p => p.Room);
-          
             return View(products.ToList());
-            
         }
 
         // GET: Admin/Products/Details/5
@@ -54,23 +52,25 @@ namespace demo_02.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "IdProduct,NameProduct,Dimension,Materials,Color,Price,IdRoom,Picture1,Picture2,Picture3")] Product product)
         {
-            if(product.ImageUpload!=null )
+
+            if (product.ImageUpload2 != null)
             {
                 string fileName = Path.GetFileNameWithoutExtension(product.ImageUpload.FileName);
                 string extension = Path.GetExtension(product.ImageUpload.FileName);
                 fileName = fileName + extension;
-                product.Picture1 = "~/Content/images/" + fileName;
-                product.ImageUpload.SaveAs(Path.Combine(Server.MapPath("~/Content/images/"), fileName));
-               
+                product.Picture1 = "/Images/" + fileName;
+                product.ImageUpload.SaveAs(Path.Combine(Server.MapPath("/Images/"), fileName));
             }
-  
-            if(product.ImageUpload2!=null)
+
+
+
+            if (product.ImageUpload2 != null)
             {
                 string fileName = Path.GetFileNameWithoutExtension(product.ImageUpload2.FileName);
                 string extension = Path.GetExtension(product.ImageUpload2.FileName);
                 fileName = fileName + extension;
-                product.Picture2 = "~/Content/images/" + fileName;
-                product.ImageUpload2.SaveAs(Path.Combine(Server.MapPath("~/Content/images/"), fileName));
+                product.Picture2 = "~/Images/" + fileName;
+                product.ImageUpload2.SaveAs(Path.Combine(Server.MapPath("~/Images/"), fileName));
             }
 
             if (product.ImageUpload3 != null)
@@ -78,8 +78,8 @@ namespace demo_02.Areas.Admin.Controllers
                 string fileName = Path.GetFileNameWithoutExtension(product.ImageUpload3.FileName);
                 string extension = Path.GetExtension(product.ImageUpload3.FileName);
                 fileName = fileName + extension;
-                product.Picture3 = "~/Content/images/" + fileName;
-                product.ImageUpload3.SaveAs(Path.Combine(Server.MapPath("~/Content/images/"), fileName));
+                product.Picture3 = "~/Images/" + fileName;
+                product.ImageUpload3.SaveAs(Path.Combine(Server.MapPath("~/Images/"), fileName));
             }
 
 

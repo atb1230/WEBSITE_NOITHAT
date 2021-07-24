@@ -9,6 +9,8 @@ namespace demo_02.Models
 {
     public class Product
     {
+        
+
         [Key]
         [Required]
         [StringLength(255)]
@@ -55,10 +57,9 @@ namespace demo_02.Models
         //-------------------------------------------
         public Product()
         {
-
-            Picture1 = "~/Content/images/logo.png";
-            Picture2 = "~/Content/images/logo.png";
-            Picture3 = "~/Content/images/logo.png";
+            Picture1 = "/Images/logo.png";
+            Picture2 = "/Images/logo.png";
+            Picture3 = "/Images/logo.png";
         }
         [NotMapped]
         public HttpPostedFileBase ImageUpload { get; set; }
