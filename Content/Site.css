@@ -27,57 +27,6 @@ textarea {
 container {
     color: white;
 }
-/*.site-branding{
-    text-align:center;
-    margin: 2.3em 2.5em 3.4em 
-}
-.header-logo img{
-    max-height:196px;
-}
-#primary-menu {
-    list-style: none;
-    margin: 0 auto;
-
-    font-family: 'Raleway', sans-serif;
-    text-transform: uppercase;
-    font-size: 0.7em;
-    letter-spacing: 2px;
-    font-weight: 600;
-    margin: 0 0 0.4em;
-    
-}
-
-.primary-nav-container {
-    background: #fff;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    box-sizing: inherit;
-}
-
-.primary-nav li {
-    margin-right: 2em;
-    margin-left: 2em;
-    display: inline-table;
-    margin: 2px 4em;
-    box-sizing: inherit;
-}
-
-li {
-    display: list-item;
-}
-.primary-nav ul {
-    color: black;
-    display: block;
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
-    font-size: 1em;
-}*/
-
-
 
 /*
 =====
@@ -113,16 +62,17 @@ li {
     padding: 1.2em 0;
     color: #b19579;
     transition: background-position-x 0.9s linear;
+    
 }
 
-a {
+.navbar-link a {
     color: #b19579;
     text-decoration: none;
     transition: all 0.45s;
 }
-
-    a:hover {
-        color: #d94f5c;
+    
+    .navbar-link a:hover {
+        color: #b19579;
         text-decoration: none;
     }
 
@@ -212,8 +162,11 @@ READ MORE
    CORE
     =====
     */
-
-.link {
+a.r-link.link.text-underlined {
+    color: #b19579;
+    font-size: 18px;
+}
+    .link {
     --textUnderlinedLineHeight: 100%;
     --textUnderlinedLineGap: 0;
     --textUnderlinedLineColor: #fed330;
@@ -230,6 +183,7 @@ READ MORE
 
     .link:hover {
         --textUnderlinedLineWidht: 0;
+        text-decoration:none;
     }
 
         .link:hover::after {
@@ -297,15 +251,31 @@ NEW PRODUCTS HOME
 
 
 /*BEST SELLING*/
-.bestselling_background {
-    background-color: #b19579;
-    margin-top: 50px
+.BestSelling_content{
+    height:600px;
 }
 
-.image_bestselling {
-    float: left;
-    width: 33.33%;
+.bestselling_background {
+    background-color: #b19579;
+    margin-top: 20px
 }
+
+
+.carousel-item {
+    height: 359px;
+    margin-left: 70px;
+    margin-top: 40px;
+}
+    .carousel-item .image-item {
+        float: left;
+        width: 33.33%;
+        justify-content:center;
+    }
+    .carousel-item .image-item h2{
+        padding-left:50px;
+       margin-top:10px;
+
+    }
 
     .image_bestselling img {
         width: 290px;
@@ -318,15 +288,9 @@ NEW PRODUCTS HOME
 
     .image_bestselling h3 {
         text-align: center;
-        color: black;
+        color: #b19579;
     }
 
-    .image_bestselling p {
-        text-align: justify;
-        color: black;
-        font-size: 18px;
-        margin: 5px 5px;
-    }
 
 
 /*collection*/
@@ -336,19 +300,19 @@ NEW PRODUCTS HOME
 }
 
 div.banner:nth-child(1) {
-    width: 550px;
+    width: 50%;
 }
 
 div.banner:nth-child(2) {
-    width: 550px;
+    width: 50%;
 }
 
 div.banner:nth-child(4) {
-    width: 550px;
+    width: 50%;
 }
 
 div.banner:nth-child(5) {
-    width: 550px;
+    width: 50%;
 }
 
 .banner {
@@ -367,9 +331,9 @@ div.banner:nth-child(5) {
         text-decoration: none;
     }
 
-    .banner .img {
+    .banner img {
+        width:550px;
         padding-right:20px;
-        border-radius: 50%;
         background-image: none;
         background-repeat: no-repeat;
         background-position: center center;
@@ -387,6 +351,26 @@ div.banner:nth-child(5) {
     color: #b19579;
 }
 
+.footer-content {
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content:center;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+    .footer-content p {
+        padding-left: 15px;
+        padding-right: 15px;
+        color: #b19579;
+        font-size: 20px;
+        text-align: center;
+    }
+.footer-content p a{
+    color:#b19579;
+}.footer-content .Contact{
+     padding-left:50px;
+ }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {

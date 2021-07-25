@@ -223,6 +223,13 @@
     <Content Include="Images\Home.png" />
     <Content Include="Images\ImagesForHome\1.jpg" />
     <Content Include="Images\ImagesForHome\10.jpg" />
+    <Content Include="Images\ImagesForHome\12.png" />
+    <Content Include="Images\ImagesForHome\13.png" />
+    <Content Include="Images\ImagesForHome\14.png" />
+    <Content Include="Images\ImagesForHome\15.png" />
+    <Content Include="Images\ImagesForHome\16.png" />
+    <Content Include="Images\ImagesForHome\17.png" />
+    <Content Include="Images\ImagesForHome\18.png" />
     <Content Include="Images\ImagesForHome\2.jpg" />
     <Content Include="Images\ImagesForHome\3.jpg" />
     <Content Include="Images\ImagesForHome\4.jpg" />
@@ -261,6 +268,8 @@
     <Content Include="Areas\Admin\Views\Products\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Products\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\Home\index.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -271,6 +280,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\popper.min.js" />
     <Content Include="Scripts\scripts.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

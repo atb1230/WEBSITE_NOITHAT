@@ -4,6 +4,7 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
 }
 
 
@@ -37,35 +38,20 @@
         </div>
     </div>
 
-    <div class="BestSelling_content">
-        <div class="bestselling_background" style="height:250px">
-            <h1 style="color:white; text-align:center; padding-top:10px">BEST SELLINGS</h1>
-            <div class="image_bestselling">
-                <img src="~/Images/ImagesForHome/5.jpg" />
-                <h3 class="title">Bàn gỗ trang trí</h3>
-            </div>
-            <div class="image_bestselling">
-                <img src="~/Images/ImagesForHome/6.jpg" />
-                <h3 class="title">Bộ ghế treo</h3>         
-            </div>
-            <div class="image_bestselling">
-                <img src="~/Images/ImagesForHome/10.jpg" />
-                <h3 class="title">Ghế làm việc </h3>
-            </div>
-        </div>
-    </div>
+
     <div style="clear:both;"></div>
+
     <div class="banner_home">
         <div class="banner">
             <a href="/LivingRoom/Index">
                 <img src="~/Images/ImagesForHome/living1.jpg" />
-                <div class="banner_text">Bedroom</div>
+                <div class="banner_text">Living Room</div>
             </a>
         </div>
         <div class="banner">
             <a href="/BedRoom/Index">
                 <img src="~/Images/ImagesForHome/bedroom1.jpg" />
-                <div class="banner_text">Living Room</div>
+                <div class="banner_text">Bedroom</div>
             </a>
         </div>
         <div style="clear:both;"></div>
@@ -84,4 +70,77 @@
     </div>
 
     <div style="clear:both;"></div>
+
+    <div class="BestSelling_content">
+        <h1 style="color:#b19579; text-align:center; padding-top:50px">BEST SELLINGS</h1>
+            <div class="bestselling_background" style="height:250px">
+            <div style="clear:both;"></div>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                @*<ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>*@
+                <div style="clear:both;"></div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="image-item">
+                            <img style="height:359px" src="~/Images/ImagesForHome/5.jpg" />
+                            <h2 class="title">Bàn gỗ trang trí</h2>
+                        </div>
+                        <div class="image-item">
+                            <img style="height:359px" src="~/Images/ImagesForHome/6.jpg" />
+                            <h2 class="title">Bộ ghế treo</h2>
+                        </div>
+                        <div class="image-item">
+                            <img style="height:359px" src="~/Images/ImagesForHome/9.jpg" />
+                            <h2 class="title">Ghế làm việc </h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="image-item">
+                            <img style="height:359px" src="~/Images/ImagesForHome/12.png" />
+                            <h2 class="title">Đèn đọc sách dáng cao</h2>
+                        </div>
+                        <div class="image-item">
+                            <img style="height:359px" src="~/Images/ImagesForHome/13.png" />
+                            <h2 class="title">Đèn trang trí </h2>
+                        </div>
+                        <div class="image-item">
+                            <img style="height:359px" src="~/Images/ImagesForHome/16.png" />
+                            <h2 class="title">Đèn dây hạc </h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="image-item">
+                            <img style="height:359px" src="~/Images/ImagesForHome/15.png" />
+                            <h2 class="title">Bàn gỗ</h2>
+                        </div>
+                        <div class="image-item">
+                            <img style="height:359px" src="~/Images/ImagesForHome/17.png" />
+                            <h2 class="title">Bàn ăn dáng tròn </h2>
+                        </div>
+                        <div class="image-item">
+                            <img style="height:359px" src="~/Images/ImagesForHome/18.png" />
+                            <h2 class="title">Bàn ăn chữ nhật nhỏ </h2>
+                        </div>
+                    </div>
+
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div style="clear:both;"></div>
+
 </div>
+<div style="clear:both;"></div>
+@Scripts.Render("~/Scripts/Home/index.js")

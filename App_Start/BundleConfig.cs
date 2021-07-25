@@ -20,10 +20,17 @@ namespace demo_02
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+                      "~/Scripts/bootstrap.js",
+                       "~/Scripts/bootstrap.min.js",
+                       "~/Scripts/jquery-3.4.1.js",
+                       "~/Scripts/jquery-3.4.1.min.js",
+                       "~/Scripts/jquery-3.2.1.slim.min.js",
+                       "~/Scripts/popper.min.js"
+                       ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/bootstrap.min.css",
                       "~/Content/site.css"));
 
         }
