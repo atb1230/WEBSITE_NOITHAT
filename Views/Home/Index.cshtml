@@ -7,49 +7,81 @@
 }
 
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Room.NameRoom)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NameProduct)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Dimension)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Materials)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Color)
-        </th>
-    </tr>
+<div class="home-content">
+    <div class="home_about">
+        <div class="shape_background" style="height:250px;">
+            <img class="image_about" src="~/Images/Home.png" />
+        </div>
+        <div class="about">
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Room.NameRoom)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NameProduct)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Dimension)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Materials)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Color)
-            </td>
-            <td>
+            <div class=" AboutUs">
+                <h1 id="text_about" style="color:#b19579;margin-top: 35px;margin-left: 100px;">About Us</h1>
+                <p id="pa-about">
+                    Originating in 1999 with the idea of ​​making a difference and a refined aesthetic, OurHome has become and maintains its position as the leading furniture brand in Vietnam. A long process of discovery and inspiration, OurHome has designed and manufactured trendy and unique furniture products, combined with a careful selection of decorative items to create Harmonious living space, Delicate and luxurious. OurHome Furniture is the choice of the Exquisite people.
+                </p>
+                <a href="#0" class="r-link link text-underlined">Read more</a>
+            </div>
+        </div>
 
-                @Html.ActionLink("Details", "Details", "Products", new { id = item.IdProduct }, null)
 
-            </td>
-        </tr>
-    }
+    </div>
+    <div class="NewProducts_content">
+        <div class="image_newproducts" style="height:350px;color:#fff">
+            <img class="new" src="~/Images/ImagesForHome/10.jpg" />
+            <img class="new" src="~/Images/ImagesForHome/5.jpg" />
+        </div>
+        <div class="newproducts_review">
+            <h1 style="color:#b19579; text-align:center">NEW PRODUCT</h1>
+            <p style="color:#b19579;text-align:justify;font-size:21px;padding: 10px 50px 20px 20px;">Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+            <a href="#0" class="r-link link text-underlined">Read more</a>
+        </div>
+    </div>
 
-</table>
+    <div class="BestSelling_content">
+        <div class="bestselling_background" style="height:250px">
+            <h1 style="color:white; text-align:center; padding-top:10px">BEST SELLINGS</h1>
+            <div class="image_bestselling">
+                <img src="~/Images/ImagesForHome/5.jpg" />
+                <h3 class="title">Bàn gỗ trang trí</h3>
+            </div>
+            <div class="image_bestselling">
+                <img src="~/Images/ImagesForHome/6.jpg" />
+                <h3 class="title">Bộ ghế treo</h3>         
+            </div>
+            <div class="image_bestselling">
+                <img src="~/Images/ImagesForHome/10.jpg" />
+                <h3 class="title">Ghế làm việc </h3>
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="banner_home">
+        <div class="banner">
+            <a href="/LivingRoom/Index">
+                <img src="~/Images/ImagesForHome/living1.jpg" />
+                <div class="banner_text">Bedroom</div>
+            </a>
+        </div>
+        <div class="banner">
+            <a href="/BedRoom/Index">
+                <img src="~/Images/ImagesForHome/bedroom1.jpg" />
+                <div class="banner_text">Living Room</div>
+            </a>
+        </div>
+        <div style="clear:both;"></div>
+        <div class="banner">
+            <a href="/WorkRoom/Index">
+                <img src="~/Images/ImagesForHome/work.jpg" />
+                <div class="banner_text">Work Room</div>
+            </a>
+        </div>
+        <div class="banner">
+            <a href="/DinningRoom/Index">
+                <img src="~/Images/ImagesForHome/dining1.jpg" />
+                <div class="banner_text">Dining Room</div>
+            </a>
+        </div>
+    </div>
+
+    <div style="clear:both;"></div>
+</div>

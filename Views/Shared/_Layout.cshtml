@@ -9,36 +9,36 @@
 
 </head>
 <body>
-    <div id="masthead" class="site-header" role="banner">
+    <header id="masthead" class="site-header" role="banner">
         <div class="site-branding">
-            <div class="header-logo">
-                <img src="/Images/logo.png" alt="Image Logo" />
+            <div class="header-logo" id="body-logo">
+                <a href="">
+                    <img src="~/Images/logo.png" alt="OURHOME'S FURNITURE" />
+                </a>
             </div>
         </div>
-    </div>
-    <div class="primary-nav-container">
-        <nav id="primary-nav" class="primary-nav" role="navigation">
-            @*<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">Primary Menu</button>*@
-            <div class="menu-top-container">
-                <ul id="primary-menu" class="menu">
-                    <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-30172"><a href="https://www.style-files.com" aria-current="page">HOME</a></li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30169"><a href="https://www.style-files.com/about/">ABOUT</a></li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30295"><a href="https://www.style-files.com/shop/">CONTACT</a></li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31366">@Html.ActionLink("Living Room", "Index", "LivingRoom")</li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31367">@Html.ActionLink("Dining Room", "Index", "DiningRoom")</li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31368">@Html.ActionLink("Bed Room", "Index", "BedRoom")</li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31369">@Html.ActionLink("Work Room", "Index", "WorkRoom")</li>
-                </ul>
-            </div>
-        </nav>
+        <div class="navbar-link">
+            <ul id="primary-menu">
+                <li>@Html.ActionLink("HOME", "Index", "Home")</li>
+                <li>@Html.ActionLink("BED ROOM", "Index", "BedRoom")</li>
+                <li>@Html.ActionLink("LIVING ROOM", "Index", "LivingRoom")</li>
+                <li>@Html.ActionLink("WORK ROOM", "Index", "WorkRoomB")</li>
+                <li>@Html.ActionLink("DINING ROOM", "Index", "BedRoom")</li>
+                <li>@Html.ActionLink("PRODUCT", "Index", "Products")</li>
+            </ul>
+        </div>
+    </header>
 
-    </div>
+
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+
+        <br />
+        <div class="footer">
+            Contact: 1800 1234
+
+        </div>
+
     </div>
 
     @Scripts.Render("~/bundles/jquery")

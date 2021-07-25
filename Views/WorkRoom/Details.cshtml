@@ -1,0 +1,91 @@
+﻿@model demo_02.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Work Room</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Room.NameRoom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Room.NameRoom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameProduct)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameProduct)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dimension)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dimension)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Materials)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Materials)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Color)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Color)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Picture1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Picture1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Picture2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Picture2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Picture3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Picture3)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdProduct }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

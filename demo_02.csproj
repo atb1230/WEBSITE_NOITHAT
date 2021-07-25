@@ -178,6 +178,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\RoomsController.cs" />
+    <Compile Include="Controllers\WorkRoomController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -219,6 +220,24 @@
     <Content Include="Images\GheAnCoque3.png" />
     <Content Include="Images\GiuongShadow.png" />
     <Content Include="Images\GiuongShadow1.png" />
+    <Content Include="Images\Home.png" />
+    <Content Include="Images\ImagesForHome\1.jpg" />
+    <Content Include="Images\ImagesForHome\10.jpg" />
+    <Content Include="Images\ImagesForHome\2.jpg" />
+    <Content Include="Images\ImagesForHome\3.jpg" />
+    <Content Include="Images\ImagesForHome\4.jpg" />
+    <Content Include="Images\ImagesForHome\5.jpg" />
+    <Content Include="Images\ImagesForHome\6.jpg" />
+    <Content Include="Images\ImagesForHome\7.jpg" />
+    <Content Include="Images\ImagesForHome\8.jpg" />
+    <Content Include="Images\ImagesForHome\9.jpg" />
+    <Content Include="Images\ImagesForHome\bedroom1.jpg" />
+    <Content Include="Images\ImagesForHome\decor1.jpg" />
+    <Content Include="Images\ImagesForHome\decor2.jpg" />
+    <Content Include="Images\ImagesForHome\decor3.jpg" />
+    <Content Include="Images\ImagesForHome\dining1.jpg" />
+    <Content Include="Images\ImagesForHome\living1.jpg" />
+    <Content Include="Images\ImagesForHome\work.jpg" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\SofaMiami.png" />
     <Content Include="Images\SofaMiami_2.jpg" />
@@ -299,6 +318,8 @@
     <Content Include="Views\DiningRoom\Details.cshtml" />
     <Content Include="Views\BedRoom\Index.cshtml" />
     <Content Include="Views\BedRoom\Details.cshtml" />
+    <Content Include="Views\WorkRoom\Index.cshtml" />
+    <Content Include="Views\WorkRoom\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

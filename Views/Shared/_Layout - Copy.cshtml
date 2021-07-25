@@ -9,45 +9,42 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                
-                @Html.ActionLink("Nội Thất", "Index", "Products", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
-                    @*<li>@Html.ActionLink("About", "About", "Home")</li>
-        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
 
-                    @*<li> @Html.ActionLink("Room", "Index", "Rooms")</li>
-                    <li> @Html.ActionLink("Product", "Index", "Products")</li>*@
-                    @*<li>
-                        <a href="~/HTML/LivingRoom.html">Phòng Khách</a>
-                        <a href="~/HTML/BedRoom.html">Phòng Ngủ</a>
-                        <a href="~/HTML/DiningRoom.html">Phòng Ăn</a>
-                        <a href="~/HTML/WorkRoom.html">Phòng Làm Việc</a>
-                    </li>*@
-                    
-                    
-                </ul>
-                @*@Html.Partial("_LoginPartial")*@
+    <header id="masthead" class="site-header" role="banner">
+        <div class="site-branding">
+            <div class="header-logo" id="body-logo">
+                <a href="">
+                    <img src="~/Images/logo.png" alt="OURHOME'S FURNITURE" />
+                </a>
             </div>
         </div>
-    </div>
+        <div class="navbar-link">
+            <ul id="primary-menu">
+                <li>@Html.ActionLink("HOME", "Index", "Home")</li>
+                <li>@Html.ActionLink("BED ROOM", "Index", "BedRoom")</li>
+                <li>@Html.ActionLink("LIVING ROOM", "Index", "LivingRoom")</li>
+                <li>@Html.ActionLink("KITCHEN", "Index", "Home")</li>
+                <li>@Html.ActionLink("DINING ROOM", "Index", "BedRoom")</li>
+                <li>@Html.ActionLink("DECORATING GOODS", "Index", "LivingRoom")</li>
+                <li>@Html.ActionLink("PRODUCT", "Index", "Products")</li>
+            </ul>
+        </div>
+    </header>
+
+
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+
+        <br />
+        <div class="footer">
+            Contact: 1800 1234
+
+        </div>
+
     </div>
+
+
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

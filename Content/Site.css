@@ -27,7 +27,7 @@ textarea {
 container {
     color: white;
 }
-.site-branding{
+/*.site-branding{
     text-align:center;
     margin: 2.3em 2.5em 3.4em 
 }
@@ -75,7 +75,336 @@ li {
     margin: 0;
     padding-left: 0;
     font-size: 1em;
+}*/
+
+
+
+/*
+=====
+navigation bar home
+=====
+*/
+.site-branding {
+    text-align: center;
+    margin: 2.3em 2.5em 3.4em;
+    background-color: #fff
 }
+
+.navbar-link {
+    flex-wrap: nowrap;
+    display: flex;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+ul#primary-menu {
+    display: flex;
+    margin: 0 auto;
+}
+
+li {
+    cursor: pointer;
+    margin: 2px 4em;
+    text-align: center;
+    color: #b19579;
+    font-size: 18px;
+    display: block;
+    padding: 1.2em 0;
+    color: #b19579;
+    transition: background-position-x 0.9s linear;
+}
+
+a {
+    color: #b19579;
+    text-decoration: none;
+    transition: all 0.45s;
+}
+
+    a:hover {
+        color: #d94f5c;
+        text-decoration: none;
+    }
+
+li:hover {
+    background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEi%0D%0AIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhs%0D%0AaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0%0D%0AaD0iMzkwcHgiIGhlaWdodD0iNTBweCIgdmlld0JveD0iMCAwIDM5MCA1MCIgZW5hYmxlLWJhY2tn%0D%0Acm91bmQ9Im5ldyAwIDAgMzkwIDUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0i%0D%0Abm9uZSIgc3Ryb2tlPSIjZDk0ZjVjIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGlt%0D%0AaXQ9IjEwIiBkPSJNMCw0Ny41ODVjMCwwLDk3LjUsMCwxMzAsMAoJYzEzLjc1LDAsMjguNzQtMzgu%0D%0ANzc4LDQ2LjE2OC0xOS40MTZDMTkyLjY2OSw0Ni41LDI0My42MDMsNDcuNTg1LDI2MCw0Ny41ODVj%0D%0AMzEuODIxLDAsMTMwLDAsMTMwLDAiLz4KPC9zdmc+Cg==");
+    animation: line 1s;
+}
+
+li:not(:last-child) {
+    margin-right: 30px;
+}
+
+@keyframes line {
+    0% {
+        background-position-x: 390px;
+    }
+}
+
+
+
+/*
+=====
+Image cover Home
+=====
+*/
+h2#text_about {
+    font-size: 21px;
+    color: #b19579;
+    padding-left: 220px;
+}
+
+p#pa-about {
+    font-size: 20px;
+    text-align: justify;
+    margin-left: 20px;
+}
+
+.shape_background {
+    position: center;
+    margin-top: 20px;
+    box-shadow: 10px 10px 20px grey;
+}
+
+    .shape_background :hover {
+        transform: scaleX(-1);
+        padding-left: 100px;
+    }
+
+.image_about {
+    padding-left: 100px;
+    padding-top: 45px;
+}
+
+
+/*
+=====
+READ MORE
+=====
+*/
+.text-underlined {
+    /*
+            1. I use pixels units because others units (em, rem, vw, vh, etc) can
+            lead to the mistake of displaying a circumcised line
+        */
+
+    --uiTextUnderlinedLineHeight: var(--textUnderlinedLineHeight, 2px); /* 1 */
+    --uiTextUnderlinedLineGap: var(--textUnderlinedLineGap, .5rem);
+    --uiTextUnderlinedPaddingBottom: calc(var(--uiTextUnderlinedLineHeight) + var(--uiTextUnderlinedLineGap));
+    padding-bottom: var(--uiTextUnderlinedPaddingBottom) !important;
+    position: var(--textUnderlinedPosition, relative) !important;
+    z-index: var(--textUnderlinedZindex, 1) !important;
+}
+
+    .text-underlined::after {
+        content: "";
+        width: var(--textUnderlinedLineWidht, 100%) !important;
+        height: var(--uiTextUnderlinedLineHeight) !important;
+        background-image: var(--textUnderlinedBackgroundImage, linear-gradient(to top, var(--textUnderlinedLineColor, currentColor) 30%, rgba(0, 0, 0, 0) 45%)) !important;
+        position: absolute;
+        left: var(--textUnderlinedLineLeft, 0) !important;
+        bottom: var(--textUnderlinedLineBottom, 0) !important;
+        z-index: var(--textUnderlinedLineZindex, -1) !important;
+    }
+
+/*
+    =====
+   CORE
+    =====
+    */
+
+.link {
+    --textUnderlinedLineHeight: 100%;
+    --textUnderlinedLineGap: 0;
+    --textUnderlinedLineColor: #fed330;
+    padding-left: .75rem;
+    padding-right: .75rem;
+}
+
+    .link::after {
+        will-change: width;
+        transition: width .1s ease-out;
+        transform: rotate(-2deg);
+        transform-origin: left bottom;
+    }
+
+    .link:hover {
+        --textUnderlinedLineWidht: 0;
+    }
+
+        .link:hover::after {
+            transition-duration: .15s;
+        }
+
+
+/*
+    * These styles for text decoration. The demo will be work without it
+    */
+
+.link {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+    .link:focus {
+        outline: 2px solid #fed330;
+        outline-offset: .5rem;
+    }
+
+/*
+    =====
+    DEMO
+    =====
+    */
+
+:root {
+    --rLinkColor: #222;
+}
+
+:root {
+    --rLinkColor: #222;
+}
+
+
+/*
+=====
+NEW PRODUCTS HOME   
+=====
+*/
+
+.NewProducts_content {
+    margin-top: 50px;
+    background-color: #fff;
+    height: 350px;
+}
+
+.image_newproducts {
+    display: flex;
+    background-color: transparent;
+    float: left;
+    width: 50%;
+}
+
+    .image_newproducts .new {
+        padding: 25px;
+    }
+
+.newproducts_review {
+    float: left;
+    width: 50%;
+    box-sizing: initial;
+}
+
+
+/*BEST SELLING*/
+.bestselling_background {
+    background-color: #b19579;
+    margin-top: 50px
+}
+
+.image_bestselling {
+    float: left;
+    width: 33.33%;
+}
+
+    .image_bestselling img {
+        width: 290px;
+        height: 350px;
+        padding: 20px;
+        display: flex;
+        margin-left: 60px;
+        margin-top: 30px;
+    }
+
+    .image_bestselling h3 {
+        text-align: center;
+        color: black;
+    }
+
+    .image_bestselling p {
+        text-align: justify;
+        color: black;
+        font-size: 18px;
+        margin: 5px 5px;
+    }
+
+
+/*collection*/
+.banner_home {
+    margin-top: 20px;
+    width: 100%;
+}
+
+div.banner:nth-child(1) {
+    width: 550px;
+}
+
+div.banner:nth-child(2) {
+    width: 550px;
+}
+
+div.banner:nth-child(4) {
+    width: 550px;
+}
+
+div.banner:nth-child(5) {
+    width: 550px;
+}
+
+.banner {
+    margin-top:50px;
+    position: relative;
+    font-size: 16px;
+    display: inline-block;
+    line-height: 2.0;
+    text-align: center;
+    height: auto;
+    float: left;
+    border: 5px solid white;
+}
+
+    .banner a {
+        text-decoration: none;
+    }
+
+    .banner .img {
+        padding-right:20px;
+        border-radius: 50%;
+        background-image: none;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+.banner_text {
+    position: absolute;
+    top: 87%;
+    height: 40px;
+    width: 200px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: white;
+    color: #b19579;
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
+
+
+
 
 
 
