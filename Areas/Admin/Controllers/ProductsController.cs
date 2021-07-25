@@ -50,7 +50,7 @@ namespace demo_02.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IdProduct,NameProduct,Dimension,Materials,Color,Price,IdRoom")] Product product,HttpPostedFileBase image)
+        public ActionResult Create([Bind(Include = "IdProduct,NameProduct,Dimension,Materials,Color,Price,IdRoom")] Product product,HttpPostedFileBase image, HttpPostedFileBase image1, HttpPostedFileBase image2)
         {
 
             if (image!= null &&image.ContentLength>0)
@@ -59,29 +59,45 @@ namespace demo_02.Areas.Admin.Controllers
                 string urlImage =   Server.MapPath("~/Images/"+fileName);
                 image.SaveAs(urlImage);
                 product.Picture1 = "/Images/" + fileName;
-                
-                
+ 
             }
 
-
-
-            if (product.ImageUpload2 != null)
+            if(image1 != null && image1.ContentLength > 0)
             {
-                string fileName = Path.GetFileNameWithoutExtension(product.ImageUpload2.FileName);
-                string extension = Path.GetExtension(product.ImageUpload2.FileName);
-                fileName = fileName + extension;
-                product.Picture2 = "~/Images/" + fileName;
-                product.ImageUpload2.SaveAs(Path.Combine(Server.MapPath("~/Images/"), fileName));
+                string fileName = System.IO.Path.GetFileName(image1.FileName);
+                string urlImage = Server.MapPath("~/Images/" + fileName);
+                image.SaveAs(urlImage);
+                product.Picture2 = "/Images/" + fileName;
+
+            }
+            if(image2 != null && image2.ContentLength > 0)
+            {
+                string fileName = System.IO.Path.GetFileName(image2.FileName);
+                string urlImage = Server.MapPath("~/Images/" + fileName);
+                image.SaveAs(urlImage);
+                product.Picture3 = "/Images/" + fileName;
+
             }
 
-            if (product.ImageUpload3 != null)
-            {
-                string fileName = Path.GetFileNameWithoutExtension(product.ImageUpload3.FileName);
-                string extension = Path.GetExtension(product.ImageUpload3.FileName);
-                fileName = fileName + extension;
-                product.Picture3 = "~/Images/" + fileName;
-                product.ImageUpload3.SaveAs(Path.Combine(Server.MapPath("~/Images/"), fileName));
-            }
+
+
+            //if (product.ImageUpload2 != null)
+            //{
+            //    string fileName = Path.GetFileNameWithoutExtension(product.ImageUpload2.FileName);
+            //    string extension = Path.GetExtension(product.ImageUpload2.FileName);
+            //    fileName = fileName + extension;
+            //    product.Picture2 = "~/Images/" + fileName;
+            //    product.ImageUpload2.SaveAs(Path.Combine(Server.MapPath("~/Images/"), fileName));
+            //}
+
+            //if (product.ImageUpload3 != null)
+            //{
+            //    string fileName = Path.GetFileNameWithoutExtension(product.ImageUpload3.FileName);
+            //    string extension = Path.GetExtension(product.ImageUpload3.FileName);
+            //    fileName = fileName + extension;
+            //    product.Picture3 = "~/Images/" + fileName;
+            //    product.ImageUpload3.SaveAs(Path.Combine(Server.MapPath("~/Images/"), fileName));
+            //}
 
 
             if (ModelState.IsValid)
