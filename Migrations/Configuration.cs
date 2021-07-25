@@ -1,4 +1,4 @@
-namespace demo_02.Migrations
+﻿namespace demo_02.Migrations
 {
     using System;
     using System.Data.Entity;
@@ -9,7 +9,8 @@ namespace demo_02.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true; //đổi cái này thành true thì mới xài đc
+
         }
 
         protected override void Seed(demo_02.Models.ApplicationDbContext context)

@@ -50,16 +50,17 @@ namespace demo_02.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IdProduct,NameProduct,Dimension,Materials,Color,Price,IdRoom,Picture1,Picture2,Picture3")] Product product)
+        public ActionResult Create([Bind(Include = "IdProduct,NameProduct,Dimension,Materials,Color,Price,IdRoom")] Product product,HttpPostedFileBase image)
         {
 
-            if (product.ImageUpload2 != null)
+            if (image!= null &&image.ContentLength>0)
             {
-                string fileName = Path.GetFileNameWithoutExtension(product.ImageUpload.FileName);
-                string extension = Path.GetExtension(product.ImageUpload.FileName);
-                fileName = fileName + extension;
+                string fileName = System.IO.Path.GetFileName(image.FileName);
+                string urlImage =   Server.MapPath("~/Images/"+fileName);
+                image.SaveAs(urlImage);
                 product.Picture1 = "/Images/" + fileName;
-                product.ImageUpload.SaveAs(Path.Combine(Server.MapPath("/Images/"), fileName));
+                
+                
             }
 
 

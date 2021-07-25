@@ -48,10 +48,10 @@ namespace demo_02.Models
         [Display(Name ="Hình Ảnh")]
         public string Picture1 { get; set; }
 
-        [Required]
+      
         [Display(Name ="Hình Ảnh 2")]
         public string Picture2 { get; set; }
-        [Required]
+       
         [Display(Name ="Hình Ảnh 3")]
         public string Picture3 { get; set; }
         //-------------------------------------------

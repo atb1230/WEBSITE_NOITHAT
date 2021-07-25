@@ -16,6 +16,7 @@ namespace demo_02.Controllers
         }
         public ActionResult Index()
         {
+
             return View(db.Products.ToList());
         }
     }
