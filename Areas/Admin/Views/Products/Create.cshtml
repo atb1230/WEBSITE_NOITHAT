@@ -75,7 +75,6 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Picture1, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                
                 @*<img src="@Url.Content(Model.Picture1)" style="height:200px;width:200px;margin:10px;" id="previewImage" />*@
                 <input type="file" name="image" onchange="ShowImagePreview(this, document.getElementById('previewImage'))" />
                 @Html.ValidationMessageFor(model => model.Picture1, "", new { @class = "text-danger" })
@@ -85,7 +84,6 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Picture2, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-               
                 <input type="file" name="image1" onchange="ShowImagePreview_2(this, document.getElementById('previewImage2'))" />
                 @Html.ValidationMessageFor(model => model.Picture2, "", new { @class = "text-danger" })
             </div>
@@ -93,8 +91,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.Picture3, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                
+            <div class="col-md-10"> 
                 <input type="file" name="image2" onchange="ShowImagePreview_3(this, document.getElementById('previewImage3'))" />
                 @Html.ValidationMessageFor(model => model.Picture3, "", new { @class = "text-danger" })
             </div>

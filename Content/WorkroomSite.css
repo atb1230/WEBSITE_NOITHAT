@@ -1,0 +1,35 @@
+﻿body {
+    padding: 0 2em 0 0;
+}
+
+.entry-header {
+    margin-bottom: 1em;
+}
+
+.entry-title {
+    margin: 0 0 0.2em;
+}
+
+.entry-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.workroom-widget {
+    padding-left: 20px
+}
+
+    .workroom-widget .img-pro {
+        box-shadow: 5px 5px 5px grey;
+        margin-top: 10px;
+    }
+
+    .workroom-widget .name-pro {
+        margin-top: 10px;
+        text-align: justify;
+        font-size: 18px;
+    }
+
+    .workroom-widget .price-pro {
+        text-align: justify;
+    }

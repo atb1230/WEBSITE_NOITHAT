@@ -1,0 +1,83 @@
+﻿.header-content {
+    margin: auto;
+}
+
+.circle-img {
+    margin-top: 30px;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    margin-left: 410px;
+}
+
+.title-header {
+    margin-top: 20px;
+    font-size: 40px;
+    text-align: center;
+    color: #b19579;
+    font-family: Segoe Script, sans-serif;
+
+}
+.first-content p{
+    font-size:20px;
+}
+.second-header {
+
+    margin-top: 20px;
+    font-size: 40px;
+    text-align: center;
+    color: #b19579;
+    font-family: Segoe Script, sans-serif;
+}
+.second-content p {
+    font-size: 20px;
+}
+.third-header {
+    margin-top: 20px;
+    font-size: 40px;
+    text-align: center;
+    color: #b19579;
+    font-family: Segoe Script, sans-serif;
+}
+.third-content p {
+    font-size: 20px;
+}
+.fourth-header {
+    margin-top: 20px;
+    font-size: 40px;
+    text-align: center;
+    color: #b19579;
+    font-family: Segoe Script, sans-serif;
+}
+.fourth-content p {
+    font-size: 20px;
+}
+.fifth-header {
+    margin-top: 20px;
+    font-size: 40px;
+    text-align: center;
+    color: #b19579;
+    font-family: Segoe Script, sans-serif;
+    margin-bottom: 50px;
+}
+.fifth-content p {
+    font-size: 20px;
+}
+.about-new-space .carousel-item {
+    height: 359px;
+    margin-left: 70px;
+    margin-top: 40px;
+}
+
+    .about-new-space .carousel-item .image-item {
+        float: left;
+        width: 50%;
+        justify-content: center;
+        display:flex;
+
+    }
+
+        .about-new-space .carousel-item .image-item h2 {
+            padding-left: 50px;
+            margin-top: 10px;
+        }

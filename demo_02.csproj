@@ -170,6 +170,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductsController.cs" />
     <Compile Include="Areas\Admin\Controllers\RoomsController.cs" />
+    <Compile Include="Controllers\AboutUsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BedRoomController.cs" />
     <Compile Include="Controllers\DiningRoomController.cs" />
@@ -204,14 +205,27 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\aboutusSite.css" />
+    <Content Include="Content\BedroomSite.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\DiningroomSite.css" />
+    <Content Include="Content\LivingroomSite.css" />
+    <Content Include="Content\ProductSite.css" />
+    <Content Include="Content\WorkroomSite.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\AboutUs\Intro1.jpg" />
+    <Content Include="Images\AboutUs\Header.jpg" />
+    <Content Include="Images\AboutUs\Intro2.png" />
+    <Content Include="Images\AboutUs\Intro3.jpg" />
+    <Content Include="Images\AboutUs\Intro4.jpg" />
+    <Content Include="Images\AboutUs\Intro5.jpg" />
+    <Content Include="Images\AboutUs\Intro6.jpg" />
     <Content Include="Images\BanAnPorto.png" />
     <Content Include="Images\BanAnPorto2.png" />
     <Content Include="Images\BanAnPorto3.png" />
@@ -314,10 +328,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Rooms\Create.cshtml" />
-    <Content Include="Views\Rooms\Delete.cshtml" />
-    <Content Include="Views\Rooms\Details.cshtml" />
-    <Content Include="Views\Rooms\Edit.cshtml" />
     <Content Include="Views\Rooms\Index.cshtml" />
     <Content Include="Views\Shared\_Layout - Copy.cshtml" />
     <Content Include="Views\Products\Details.cshtml" />
@@ -330,6 +340,7 @@
     <Content Include="Views\BedRoom\Details.cshtml" />
     <Content Include="Views\WorkRoom\Index.cshtml" />
     <Content Include="Views\WorkRoom\Details.cshtml" />
+    <Content Include="Views\AboutUs\AboutUsIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

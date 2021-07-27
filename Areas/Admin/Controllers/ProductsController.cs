@@ -66,7 +66,7 @@ namespace demo_02.Areas.Admin.Controllers
             {
                 string fileName = System.IO.Path.GetFileName(image1.FileName);
                 string urlImage = Server.MapPath("~/Images/" + fileName);
-                image.SaveAs(urlImage);
+                image1.SaveAs(urlImage);
                 product.Picture2 = "/Images/" + fileName;
 
             }
@@ -74,7 +74,7 @@ namespace demo_02.Areas.Admin.Controllers
             {
                 string fileName = System.IO.Path.GetFileName(image2.FileName);
                 string urlImage = Server.MapPath("~/Images/" + fileName);
-                image.SaveAs(urlImage);
+                image2.SaveAs(urlImage);
                 product.Picture3 = "/Images/" + fileName;
 
             }
@@ -132,8 +132,34 @@ namespace demo_02.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IdProduct,NameProduct,Dimension,Materials,Color,Price,IdRoom,Picture1,Picture2,Picture3")] Product product)
+        public ActionResult Edit([Bind(Include = "IdProduct,NameProduct,Dimension,Materials,Color,Price,IdRoom,Picture1,Picture2,Picture3")] Product product, HttpPostedFileBase image, HttpPostedFileBase image1, HttpPostedFileBase image2)
         {
+            if (image != null && image.ContentLength > 0)
+            {
+                string fileName = System.IO.Path.GetFileName(image.FileName);
+                string urlImage = Server.MapPath("~/Images/" + fileName);
+                image.SaveAs(urlImage);
+                product.Picture1 = "/Images/" + fileName;
+
+            }
+
+            if (image1 != null && image1.ContentLength > 0)
+            {
+                string fileName = System.IO.Path.GetFileName(image1.FileName);
+                string urlImage = Server.MapPath("~/Images/" + fileName);
+                image1.SaveAs(urlImage);
+                product.Picture2 = "/Images/" + fileName;
+
+            }
+            if (image2 != null && image2.ContentLength > 0)
+            {
+                string fileName = System.IO.Path.GetFileName(image2.FileName);
+                string urlImage = Server.MapPath("~/Images/" + fileName);
+                image2.SaveAs(urlImage);
+                product.Picture3 = "/Images/" + fileName;
+
+            }
+
             if (ModelState.IsValid)
             {
                 db.Entry(product).State = EntityState.Modified;

@@ -5,72 +5,25 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Room.NameRoom)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NameProduct)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Dimension)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Materials)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Color)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Picture1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Picture2)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Picture3)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Room.NameRoom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NameProduct)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Dimension)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Materials)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Color)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            <img src="@Url.Content(item.Picture1)" height="100" width="100" />
-        </td>
-        <td>
-            <img src="@Url.Content(item.Picture2)" height="100" width="100" />
-        </td>
-        <td>
-            <img src="@Url.Content(item.Picture3)" height="100" width="100" />
-        </td>
-        <td>
-          @Html.ActionLink("Details", "Details", new { id=item.IdProduct })
-           
-        </td>
-    </tr>
-}
-
-</table>
+<header class="entry-header">
+    <h1 class="entry-title">
+        ALL PRODUCT
+    </h1>
+</header>
+<div class="entry-content">
+    @foreach (var item in Model)
+    {
+    <a href="/Products/Details/@item.IdProduct">
+        <div class="pro-widget">
+            <img class="img-pro"
+                 src="@Url.Content(item.Picture1)" height="200" width="200" />
+            <div class="name-pro">
+                @Html.DisplayFor(modelItem => item.NameProduct);
+            </div>
+            <div class="price-pro">
+                @Html.DisplayFor(modelItem => item.Price);
+            </div>
+        </div>
+    </a>
+            }
+    </div>

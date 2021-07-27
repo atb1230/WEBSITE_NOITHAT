@@ -32,6 +32,30 @@ namespace demo_02
                       "~/Content/bootstrap.css",
                       "~/Content/bootstrap.min.css",
                       "~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Bebroom/css").Include(
+                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap.min.css",
+                      "~/Content/BedroomSite.css"));
+            bundles.Add(new StyleBundle("~/Livingroom/css").Include(
+                     "~/Content/bootstrap.css",
+                     "~/Content/bootstrap.min.css",
+                     "~/Content/LivingroomSite.css"));
+            bundles.Add(new StyleBundle("~/Diningroom/css").Include(
+                     "~/Content/bootstrap.css",
+                     "~/Content/bootstrap.min.css",
+                     "~/Content/DiningroomSite.css"));
+            bundles.Add(new StyleBundle("~/Workroom/css").Include(
+                     "~/Content/bootstrap.css",
+                     "~/Content/bootstrap.min.css",
+                     "~/Content/WorkroomSite.css"));
+            bundles.Add(new StyleBundle("~/Product/css").Include(
+                     "~/Content/bootstrap.css",
+                     "~/Content/bootstrap.min.css",
+                     "~/Content/ProductSite.css"));
+            bundles.Add(new StyleBundle("~/AboutUs/css").Include(
+                    "~/Content/bootstrap.css",
+                    "~/Content/bootstrap.min.css",
+                    "~/Content/aboutusSite.css"));
 
         }
     }

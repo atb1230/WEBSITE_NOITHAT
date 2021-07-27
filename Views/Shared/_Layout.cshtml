@@ -6,6 +6,12 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Styles.Render("~/bundles/bootstrap")
+    @Styles.Render("~/Bebroom/css")
+    @Styles.Render("~/Livingroom/css")
+    @Styles.Render("~/Workroom/css")
+    @Styles.Render("~/Diningroom/css")
+    @Styles.Render("~/Product/css")
+    @Styles.Render("~/AboutUs/css")
     @Scripts.Render("~/bundles/modernizr")
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -17,7 +23,7 @@
     <header id="masthead" class="site-header" role="banner">
         <div class="site-branding">
             <div class="header-logo" id="body-logo">
-                <a href="">
+                <a href="/">
                     <img src="~/Images/logo.png" alt="OURHOME'S FURNITURE" />
                 </a>
             </div>
@@ -28,7 +34,7 @@
                 <li>@Html.ActionLink("BED ROOM", "Index", "BedRoom")</li>
                 <li>@Html.ActionLink("LIVING ROOM", "Index", "LivingRoom")</li>
                 <li>@Html.ActionLink("WORK ROOM", "Index", "WorkRoom")</li>
-                <li>@Html.ActionLink("DINING ROOM", "Index", "BedRoom")</li>
+                <li>@Html.ActionLink("DINING ROOM", "Index", "DiningRoom")</li>
                 <li>@Html.ActionLink("PRODUCT", "Index", "Products")</li>
             </ul>
         </div>
