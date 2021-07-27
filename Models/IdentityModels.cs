@@ -22,6 +22,8 @@ namespace demo_02.Models
     {
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Status> Statuses { get; set; }
+        public DbSet<TypeProduct> TypeProducts { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

@@ -17,7 +17,7 @@ namespace demo_02.Controllers
         // GET: Products
         public ActionResult Index()
         {
-            var products = db.Products.Include(p => p.Room);
+            var products = db.Products.Include(p => p.Room).Include(p => p.Status).Include(p => p.TypeProduct); ;
             return View(products.ToList());
         }
 
@@ -40,6 +40,8 @@ namespace demo_02.Controllers
         public ActionResult Create()
         {
             ViewBag.IdRoom = new SelectList(db.Rooms, "IdRoom", "NameRoom");
+            ViewBag.IdStatus = new SelectList(db.Statuses, "IdStatus", "NameStatus");
+            ViewBag.IdTypeProduct = new SelectList(db.TypeProducts, "IdTypeProduct", "NameTypeProdcut");
             return View();
         }
 
@@ -48,7 +50,7 @@ namespace demo_02.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IdProduct,NameProduct,Dimension,Materials,Color,Price,IdRoom,Picture1,Picture2,Picture3")] Product product)
+        public ActionResult Create([Bind(Include = "IdProduct,IdTypeProduct,NameProduct,IdStatus,Dimension,Materials,Color,Price,IdRoom")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -57,6 +59,8 @@ namespace demo_02.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.IdStatus = new SelectList(db.Statuses, "IdStatus", "NameStatus");
+            ViewBag.IdTypeProduct = new SelectList(db.TypeProducts, "IdTypeProduct", "NameTypeProdcut");
             ViewBag.IdRoom = new SelectList(db.Rooms, "IdRoom", "NameRoom", product.IdRoom);
             return View(product);
         }
@@ -73,6 +77,8 @@ namespace demo_02.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.IdStatus = new SelectList(db.Statuses, "IdStatus", "NameStatus");
+            ViewBag.IdTypeProduct = new SelectList(db.TypeProducts, "IdTypeProduct", "NameTypeProdcut");
             ViewBag.IdRoom = new SelectList(db.Rooms, "IdRoom", "NameRoom", product.IdRoom);
             return View(product);
         }
@@ -82,7 +88,7 @@ namespace demo_02.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IdProduct,NameProduct,Dimension,Materials,Color,Price,IdRoom,Picture1,Picture2,Picture3")] Product product)
+        public ActionResult Edit([Bind(Include = "IdProduct,NameProduct,Dimension,Materials,Color,Price,IdRoom")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -90,6 +96,8 @@ namespace demo_02.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.IdStatus = new SelectList(db.Statuses, "IdStatus", "NameStatus");
+            ViewBag.IdTypeProduct = new SelectList(db.TypeProducts, "IdTypeProduct", "NameTypeProdcut");
             ViewBag.IdRoom = new SelectList(db.Rooms, "IdRoom", "NameRoom", product.IdRoom);
             return View(product);
         }

@@ -9,7 +9,10 @@ namespace demo_02.Models
 {
     public class Product
     {
-        
+        [ForeignKey("TypeProduct")]
+        [Display(Name = "Loại Sản Phẩm")]
+        public string IdTypeProduct { get; set; }
+        public TypeProduct TypeProduct { get; set; }
 
         [Key]
         [Required]
@@ -20,6 +23,11 @@ namespace demo_02.Models
         [StringLength(255)]
         [Display(Name ="Tên Sản Phẩm")]
         public string NameProduct { get; set; }
+
+        [ForeignKey("Status")]
+        [Display(Name = "Loại Sản Phẩm")]
+        public int IdStatus { get; set; }
+        public Status Status { get; set; }
 
         [Required]
         [StringLength(255)]

@@ -16,7 +16,16 @@
             @Html.DisplayNameFor(model => model.Room.NameRoom)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.TypeProduct.NameTypeProdcut)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdProduct)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.NameProduct)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status.NameStatus)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Dimension)
@@ -43,41 +52,50 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Room.NameRoom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NameProduct)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Dimension)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Materials)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Color)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            
-            <img src="@Url.Content(item.Picture1)" height="100" width="100" />
-        </td>
-        <td>
-            <img src="@Url.Content(item.Picture2)" height="100" width="100" />
-        </td>
-        <td>
-            <img src="@Url.Content(item.Picture3)" height="100" width="100" />
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdProduct }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdProduct }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdProduct })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Room.NameRoom)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TypeProduct.NameTypeProdcut)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.IdProduct)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NameProduct)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Status.NameStatus)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Dimension)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Materials)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Color)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Price)
+    </td>
+    <td>
+
+        <img src="@Url.Content(item.Picture1)" height="100" width="100" />
+    </td>
+    <td>
+        <img src="@Url.Content(item.Picture2)" height="100" width="100" />
+    </td>
+    <td>
+        <img src="@Url.Content(item.Picture3)" height="100" width="100" />
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.IdProduct }) |
+        @Html.ActionLink("Details", "Details", new { id = item.IdProduct }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.IdProduct })
+    </td>
+</tr>
 }
 
 </table>

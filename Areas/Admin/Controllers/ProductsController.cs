@@ -18,7 +18,7 @@ namespace demo_02.Areas.Admin.Controllers
         // GET: Admin/Products
         public ActionResult Index()
         {
-            var products = db.Products.Include(p => p.Room);
+            var products = db.Products.Include(p => p.Room).Include(s=>s.Status).Include(t=>t.TypeProduct);
             return View(products.ToList());
         }
 
@@ -40,6 +40,8 @@ namespace demo_02.Areas.Admin.Controllers
         // GET: Admin/Products/Create
         public ActionResult Create()
         {
+            ViewBag.IdStatus = new SelectList(db.Statuses, "IdStatus", "NameStatus");
+            ViewBag.IdTypeProduct = new SelectList(db.TypeProducts, "IdTypeProduct", "NameTypeProdcut");
             ViewBag.IdRoom = new SelectList(db.Rooms, "IdRoom", "NameRoom");
             Product pro = new Product();
             return View(pro);
@@ -50,7 +52,7 @@ namespace demo_02.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IdProduct,NameProduct,Dimension,Materials,Color,Price,IdRoom")] Product product,HttpPostedFileBase image, HttpPostedFileBase image1, HttpPostedFileBase image2)
+        public ActionResult Create([Bind(Include = "IdProduct,IdTypeProduct,NameProduct,IdStatus,Dimension,Materials,Color,Price,IdRoom")] Product product,HttpPostedFileBase image, HttpPostedFileBase image1, HttpPostedFileBase image2)
         {
 
             if (image!= null &&image.ContentLength>0)
@@ -106,7 +108,8 @@ namespace demo_02.Areas.Admin.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
+            ViewBag.IdStatus = new SelectList(db.Statuses, "IdStatus", "NameStatus");
+            ViewBag.IdTypeProduct = new SelectList(db.TypeProducts, "IdTypeProduct", "NameTypeProdcut");
             ViewBag.IdRoom = new SelectList(db.Rooms, "IdRoom", "NameRoom", product.IdRoom);
             return View(product);
         }
@@ -123,6 +126,8 @@ namespace demo_02.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.IdStatus = new SelectList(db.Statuses, "IdStatus", "NameStatus");
+            ViewBag.IdTypeProduct = new SelectList(db.TypeProducts, "IdTypeProduct", "NameTypeProdcut");
             ViewBag.IdRoom = new SelectList(db.Rooms, "IdRoom", "NameRoom", product.IdRoom);
             return View(product);
         }
@@ -132,7 +137,7 @@ namespace demo_02.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IdProduct,NameProduct,Dimension,Materials,Color,Price,IdRoom,Picture1,Picture2,Picture3")] Product product, HttpPostedFileBase image, HttpPostedFileBase image1, HttpPostedFileBase image2)
+        public ActionResult Edit([Bind(Include = "IdProduct,IdTypeProduct,NameProduct,IdStatus,Dimension,Materials,Color,Price,IdRoom")] Product product, HttpPostedFileBase image, HttpPostedFileBase image1, HttpPostedFileBase image2)
         {
             if (image != null && image.ContentLength > 0)
             {
@@ -166,6 +171,8 @@ namespace demo_02.Areas.Admin.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.IdStatus = new SelectList(db.Statuses, "IdStatus", "NameStatus");
+            ViewBag.IdTypeProduct = new SelectList(db.TypeProducts, "IdTypeProduct", "NameTypeProdcut");
             ViewBag.IdRoom = new SelectList(db.Rooms, "IdRoom", "NameRoom", product.IdRoom);
             return View(product);
         }
