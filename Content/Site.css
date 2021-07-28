@@ -387,6 +387,36 @@ div.banner:nth-child(5) {
     }
 }
 
+/*BTN SEARCH*/
+btn#btnSearch {
+    border: none;
+    background-color: white;
+}
+
+.change_color_button {
+    color: black;
+}
+.search-product {
+    float: right;
+}
+input#txtInput {
+    border: none;
+}
+
+span.facebook {
+    float: left;
+}
+span.pinterest {
+    float: left;
+}
+span.youtube {
+    float:left;
+}
+
+span.facebook {
+    left: 250px;
+    position: absolute;
+}
 
 
 

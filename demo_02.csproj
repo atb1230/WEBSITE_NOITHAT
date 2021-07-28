@@ -358,6 +358,7 @@
     <Content Include="Views\WorkRoom\Index.cshtml" />
     <Content Include="Views\WorkRoom\Details.cshtml" />
     <Content Include="Views\AboutUs\AboutUsIndex.cshtml" />
+    <Content Include="Views\Products\SearchByNam.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

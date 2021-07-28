@@ -18,6 +18,7 @@ namespace demo_02.Controllers
         public ActionResult Index()
         {
             var products = db.Products.Include(p => p.Room).Include(p => p.Status).Include(p => p.TypeProduct); ;
+            
             return View(products.ToList());
         }
 
@@ -135,6 +136,13 @@ namespace demo_02.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public ActionResult SearchByNam(string name)
+        {
+            //truy vấn các sản phẩm có tên chứa từ khóa name
+            List<Product> productList = db.Products.Where(x => x.NameProduct.Contains(name)).ToList();
+            return View(productList);
         }
     }
 }
