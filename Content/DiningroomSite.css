@@ -15,6 +15,9 @@
     flex-wrap: wrap;
 }
 
+
+
+
 .diningroom-widget {
     padding-left: 20px
 }
@@ -27,9 +30,16 @@
     .diningroom-widget .name-pro {
         margin-top: 10px;
         text-align: justify;
-        font-size: 18px;
+        font-size: 15px;
+        letter-spacing: 1.75px;
+        font-family: "Josefin Sans",sans-serif;
+        line-height: 25px;
     }
 
     .diningroom-widget .price-pro {
-        text-align: justify;
+        text-align: inherit;
+        font-size: 13px;
+        letter-spacing: 1.75px;
+        font-family: "Josefin Sans",sans-serif;
+        line-height: 25px;
     }

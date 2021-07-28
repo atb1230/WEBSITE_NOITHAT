@@ -56,7 +56,12 @@ namespace demo_02
                     "~/Content/bootstrap.css",
                     "~/Content/bootstrap.min.css",
                     "~/Content/aboutusSite.css"));
-
+            //bundles.Add(new StyleBundle("~/ProductAdmin/css").Include(
+            //    "~/Scripts/bootstrap.min.css",
+            //    "~/Scripts/bootstrap.bundle.min.js",
+            //    "~/Scripts/jquery.min.js",
+            //    "~/Content/ProductAdminSite.css"));
         }
+
     }
 }

@@ -5,7 +5,7 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Index</h2>
+@*<h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -98,4 +98,36 @@
 </tr>
 }
 
-</table>
+</table>*@
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="container-fluid mt-3 mb-3">
+    <div class="row g-2">
+        
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="img-container">
+                        @*<div class="d-flex justify-content-between align-items-center p-2 first">  </div>*@
+                        <img src="@Url.Content(item.Picture1)" class="img-fluid">
+                    </div>
+                    <div class="product-detail-container">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h6 class="mb-0">@Html.DisplayFor(modelItem => item.NameProduct)</h6>
+                            <span class="text-danger font-weight-bold">@Html.DisplayFor(modelItem => item.Price)</span>
+                        </div>
+
+                        <div class="btn grouplink">
+                            @Html.ActionLink("Edit", "Edit", new { id = item.IdProduct }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.IdProduct }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.IdProduct })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

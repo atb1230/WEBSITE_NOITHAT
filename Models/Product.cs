@@ -25,7 +25,7 @@ namespace demo_02.Models
         public string NameProduct { get; set; }
 
         [ForeignKey("Status")]
-        [Display(Name = "Loại Sản Phẩm")]
+        [Display(Name = "Trạng Thái")]
         public int IdStatus { get; set; }
         public Status Status { get; set; }
 
