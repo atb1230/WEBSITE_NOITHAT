@@ -24,6 +24,61 @@ textarea {
 }
 
 
+/*BTN SEARCH*/
+btn#btnSearch {
+    border: none;
+    background-color: white;
+}
+
+.change_color_button {
+    color: black;
+}
+
+.search-product {
+    float: right;
+    
+
+}
+i.fas.fa-search {
+    font-size: 30px;
+    color:#b19579;
+}
+
+input#txtInput {
+    border: none;
+    width: 500px;
+    height: 50px;
+}
+span#searchtext {
+    font-size: 20px;
+}
+span.facebook {
+    float: left;
+    color: #b19579;
+    left: 250px;
+    position: absolute;
+}
+
+
+span.pinterest {
+    float: left;
+    color: #b19579;
+}
+}
+
+span.youtube {
+    float: left;
+color:#b19579;
+}
+
+span#dropdownMenuButton {
+ 
+    background-color: #b19579;
+    border: none;
+}
+
+
+
 container {
     color: white;
 }
@@ -354,10 +409,11 @@ div.banner:nth-child(5) {
 .footer-content {
     flex-wrap: nowrap;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     background: #fff;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
+    margin-top: 100px;
 }
     .footer-content p {
         padding-left: 15px;

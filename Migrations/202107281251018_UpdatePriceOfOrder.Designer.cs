@@ -6,14 +6,14 @@ namespace demo_02.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class UpdateImages : IMigrationMetadata
+    [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
+    public sealed partial class UpdatePriceOfOrder : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdateImages));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdatePriceOfOrder));
         
         string IMigrationMetadata.Id
         {
-            get { return "202107230907425_UpdateImages"; }
+            get { return "202107281251018_UpdatePriceOfOrder"; }
         }
         
         string IMigrationMetadata.Source

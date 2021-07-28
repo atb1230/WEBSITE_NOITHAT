@@ -10,6 +10,7 @@ using demo_02.Models;
 
 namespace demo_02.Controllers
 {
+    [Route("/products")]
     public class ProductsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -20,6 +21,10 @@ namespace demo_02.Controllers
             var products = db.Products.Include(p => p.Room).Include(p => p.Status).Include(p => p.TypeProduct); ;
             return View(products.ToList());
         }
+        
+        //Add to Cart
+       
+
 
         // GET: Products/Details/5
         public ActionResult Details(string id)

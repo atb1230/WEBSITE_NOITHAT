@@ -104,6 +104,7 @@ namespace demo_02.Areas.Admin.Controllers
 
             if (ModelState.IsValid)
             {
+                product.IdProduct = product.IdTypeProduct + product.IdProduct;
                 db.Products.Add(product);
                 db.SaveChanges();
                 return RedirectToAction("Index");

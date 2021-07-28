@@ -24,6 +24,9 @@ namespace demo_02.Models
         public DbSet<Product> Products { get; set; }
         public DbSet<Status> Statuses { get; set; }
         public DbSet<TypeProduct> TypeProducts { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Customer> Customers { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

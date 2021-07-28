@@ -2,18 +2,41 @@
     padding: 0 2em 0 0;
 }
 
+a.link-to-product {
+    color: #19191a;
+}
+
 .entry-header {
     margin-bottom: 1em;
 }
 
 .entry-title {
     margin: 0 0 0.2em;
+    text-align: center;
+    color: #b19579;
+}
+
+svg:not(:root) {
+    float: right;
+    margin: 5px;
 }
 
 .entry-content {
     display: flex;
     flex-wrap: wrap;
 }
+
+span .fab fa-opencart {
+    color: black;
+}
+
+img.img-pro {
+    /*height: 250px;
+    width: 250px;*/
+    height: 422px;
+    width: 340px;
+}
+
 
 .pro-widget {
     padding-left: 20px
@@ -25,11 +48,18 @@
     }
 
     .pro-widget .name-pro {
-        margin-top:10px;
+        margin-top: 10px;
         text-align: justify;
-        font-size: 18px;
+        font-size: 15px;
+        letter-spacing: 1.75px;
+        font-family: "Josefin Sans",sans-serif;
+        line-height: 25px;
     }
 
     .pro-widget .price-pro {
-        text-align: justify;
+        text-align: inherit;
+        font-size: 13px;
+        letter-spacing: 1.75px;
+        font-family: "Josefin Sans",sans-serif;
+        line-height: 25px;
     }

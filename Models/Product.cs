@@ -51,6 +51,7 @@ namespace demo_02.Models
         [ForeignKey("Room")]
         public int IdRoom { get; set; }
         public Room Room { get; set; }
+        
 
         [Required]
         [Display(Name ="Hình Ảnh")]
