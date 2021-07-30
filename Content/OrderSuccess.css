@@ -1,0 +1,38 @@
+﻿
+.circle-img {
+    margin-top: 30px;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+}
+h2, h2 {
+    font-size: 30px;
+    font-family: Segoe Script, sans-serif;
+    margin-top: 20px;
+    color: tan;
+}
+.h3, h3 {
+    font-size: 30px;
+    font-family: Segoe Script, sans-serif;
+    margin-top: 20px;
+    color: tan;
+}
+p.notice-message {
+    font-size: 18px;
+    color: tan;
+}
+p {
+    font-size: 18px;
+    color: tan;
+}
+i.fab.fa-opencart {
+    font-size: 50px;
+    color: white;
+    background: tan;
+    width: 70px;
+    height: 70px;
+    text-align: justify;
+    padding-top: 10px;
+    padding-left: 3px;
+}

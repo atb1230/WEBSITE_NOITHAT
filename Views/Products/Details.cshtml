@@ -5,87 +5,248 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+@*<h2>Details</h2>
 
-<div>
-    <h4>Product</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Room.NameRoom)
-        </dt>
+    <div>
+        <h4>Product</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Room.NameRoom)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Room.NameRoom)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Room.NameRoom)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NameProduct)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.NameProduct)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.NameProduct)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.NameProduct)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Dimension)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Dimension)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Dimension)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Dimension)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Materials)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Materials)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Materials)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Materials)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Color)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Color)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Color)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Color)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Picture1)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Picture1)
+            </dt>
 
-        <dd>
-            <img src="@Url.Content(Model.Picture1)" style="height:422px;width:340px;margin:10px;" id="previewImage1" />
-        </dd>
+            <dd>
+                <img src="@Url.Content(Model.Picture1)" style="height:422px;width:340px;margin:10px;" id="previewImage1" />
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Picture2)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Picture2)
+            </dt>
 
-        <dd>
-            <img src="@Url.Content(Model.Picture2)" style="height:422px;width:340px;margin:10px;" id="previewImage2" />
-        </dd>
+            <dd>
+                <img src="@Url.Content(Model.Picture2)" style="height:422px;width:340px;margin:10px;" id="previewImage2" />
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Picture3)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Picture3)
+            </dt>
 
-        <dd>
-            <img src="@Url.Content(Model.Picture3)" style="height:422px;width:340px;margin:10px;" id="previewImage3" />
-        </dd>
+            <dd>
+                <img src="@Url.Content(Model.Picture3)" style="height:422px;width:340px;margin:10px;" id="previewImage3" />
+            </dd>
 
-    </dl>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.IdProduct }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@
+
+<div class="banner-bootom-w3-agileits">
+    <div class="container">
+        <!-- tittle heading -->
+        <h3 class="tittle-w3l">
+            Chi tiết sản phẩm
+            <span class="heading-style">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </h3>
+        <!-- //tittle heading -->
+        <div class="col-md-5 single-right-left ">
+            <div class="grid images_3_of_2">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li data-thumb="@Url.Content(Model.Picture1)">
+                            <div class="thumb-image">
+                                <img src="@Url.Content(Model.Picture1)" data-imagezoom="true" class="img-responsive" alt="">
+                            </div>
+                        </li>
+                        <li data-thumb="@Url.Content(Model.Picture1)">
+                            <div class="thumb-image">
+                                <img src="@Url.Content(Model.Picture2)" data-imagezoom="true" class="img-responsive" alt="">
+                            </div>
+                        </li>
+                        <li data-thumb="@Url.Content(Model.Picture1)">
+                            <div class="thumb-image">
+                                <img src="@Url.Content(Model.Picture3)" data-imagezoom="true" class="img-responsive" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7 single-right-left simpleCart_shelfItem">
+            @*<h3>@Html.DisplayFor(model => model.NameProduct)</h3>*@
+            @*<p>
+                <span class="item_price">@Html.DisplayFor(model => model.Price)</span>
+                
+                <label>Free delivery</label>
+            </p>*@
+            <div class="single-infoagile">
+                <ul>
+                    <li class="name-product">
+                       
+                        <span class="item-prouduct">
+                         @Html.DisplayFor(model => model.NameProduct)
+                        <span>
+                    </li>
+                    <li>
+                        Shipping Speed to Delivery.
+                    </li>
+                    <li class="name-dimesion">
+                        
+                        <span class="item-demesion">
+                            @Html.DisplayFor(model => model.Dimension)
+                        </span>
+                        
+                    </li>
+                    <li>
+                        1 offer from
+                        <span class="item_price">@Html.DisplayFor(model => model.Price)</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="product-single-w3l">
+                @*<p>
+                    <i class="fa fa-hand-o-right" aria-hidden="true"></i>This is a
+                    <label>Vegetarian</label> product.
+                </p>*@
+                <ul>
+                    <li>
+                        Best for Biryani and Pulao.
+                    </li>
+                    <li>
+                        After cooking, Zeeba Basmati rice grains attain an extra ordinary length of upto 2.4 cm/~1 inch.
+                    </li>
+                    <li>
+                        Zeeba Basmati rice adheres to the highest food afety standards as your health is paramount to us.
+                    </li>
+                    <li>
+                        Contains only the best and purest grade of basmati rice grain of Export quality.
+                    </li>
+                </ul>
+                @*<p>
+                    <i class="fa fa-refresh" aria-hidden="true"></i>All food products are
+                    <label>non-returnable.</label>
+                </p>*@
+            </div>
+            <div class="occasion-cart">
+                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                    <form action="#" method="post">
+                        <fieldset>
+                            <input type="hidden" name="cmd" value="_cart" />
+                            <input type="hidden" name="add" value="1" />
+                            <input type="hidden" name="business" value=" " />
+                            <input type="hidden" name="item_name" value="Zeeba Premium Basmati Rice - 5 KG" />
+                            <input type="hidden" name="amount" value="950.00" />
+                            <input type="hidden" name="discount_amount" value="1.00" />
+                            <input type="hidden" name="currency_code" value="USD" />
+                            <input type="hidden" name="return" value=" " />
+                            <input type="hidden" name="cancel_return" value=" " />
+                            <a href="/Cart/AddtoCart/@Model.IdProduct">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16" aria-label="Right Algin">
+                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                            </a>
+                        </fieldset>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="clearfix"> </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.IdProduct }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/furniture_detail")
+    <script>
+        // Can also be used with $(document).ready()
+        $(window).load(function () {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                controlNav: "thumbnails"
+            });
+        });
+    </script>
+    <script>
+        $(window).load(function () {
+            $("#flexiselDemo1").flexisel({
+                visibleItems: 3,
+                animationSpeed: 1000,
+                autoPlay: true,
+                autoPlaySpeed: 3000,
+                pauseOnHover: true,
+                enableResponsiveBreakpoints: true,
+                responsiveBreakpoints: {
+                    portrait: {
+                        changePoint: 480,
+                        visibleItems: 1
+                    },
+                    landscape: {
+                        changePoint: 640,
+                        visibleItems: 2
+                    },
+                    tablet: {
+                        changePoint: 768,
+                        visibleItems: 2
+                    }
+                }
+            });
+
+        });
+    </script>
+}
+

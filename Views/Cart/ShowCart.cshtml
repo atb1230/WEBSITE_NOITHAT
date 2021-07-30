@@ -16,7 +16,7 @@
                 <table class="table " style="">
                     <thead>
                         <tr>
-                            
+
                             <th>Product Name</th>
                             @*<th>Image</th>*@
                             <th>Price</th>
@@ -38,6 +38,7 @@
                                         <input type="hidden" value="@item.Product.IdProduct" name="ID_Product" />
                                         @*<input type="number" value="@item.qty" name="Quantity"/>*@
                                         <input aria-label="quantity" class="input-qty" max="10" min="1" name="Quantity" type="number" value="@item.Quatity">
+                                        <input type="submit" value="Update" />
                                     }
 
                                 </td>
@@ -57,11 +58,11 @@
                 {
 
                     <div class="prices">
-                       <span class="prices__text">Tổng cộng</span>
-                       <span class="prices__value prices__value--final">
+                        <span class="prices__text">Tổng cộng</span>
+                        <span class="prices__value prices__value--final">
                             @Model.TotalMoney()
-                       <p class="vat">(Đã bao gồm VAT)</p>
-                       </span>
+                            <p class="vat">(Đã bao gồm VAT)</p>
+                        </span>
                     </div>
                     <button class="btn-Buy">
                         <a href="/Cart/Checkout">Mua Hàng</a>
@@ -69,19 +70,19 @@
                 }
             </div>
             @*<div class="Bill">
-                @{ var customer = Session["Customer"] as demo_02.Models.Customer;}
-                @using (Html.BeginForm("Checkout", "Cart"))
-                {
-                    
-                    <div class="prices">
-                        <ul class="prices__items"><li class="prices__item"><span class="prices__text">Tạm tính</span><span class="prices__value">@Model.TotalMoney()</span></li><li class="prices__item"><span class="prices__text">Giảm giá</span><span class="prices__value">0</span></li></ul><p class="prices__total"><span class="prices__text">Tổng cộng</span><span class="prices__value prices__value--final">@Model.TotalMoney()<p class="vat">(Đã bao gồm VAT nếu có)</p></span></p>
-                    </div>
-                    <button type="button" class="btn btn-danger btn-block">
-                        <a href="/Cart/Checkout">Mua Hàng</a>
-                    </button>
-                }
+                    @{ var customer = Session["Customer"] as demo_02.Models.Customer;}
+                    @using (Html.BeginForm("Checkout", "Cart"))
+                    {
 
-            </div>*@
+                        <div class="prices">
+                            <ul class="prices__items"><li class="prices__item"><span class="prices__text">Tạm tính</span><span class="prices__value">@Model.TotalMoney()</span></li><li class="prices__item"><span class="prices__text">Giảm giá</span><span class="prices__value">0</span></li></ul><p class="prices__total"><span class="prices__text">Tổng cộng</span><span class="prices__value prices__value--final">@Model.TotalMoney()<p class="vat">(Đã bao gồm VAT nếu có)</p></span></p>
+                        </div>
+                        <button type="button" class="btn btn-danger btn-block">
+                            <a href="/Cart/Checkout">Mua Hàng</a>
+                        </button>
+                    }
+
+                </div>*@
             <div>
             </div>
         </div>

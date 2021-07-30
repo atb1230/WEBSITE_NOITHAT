@@ -9,6 +9,9 @@
 .entry-title {
     margin: 0 0 0.2em;
 }
+svg.bi.bi-cart {
+    color: black;
+}
 
 .entry-content {
     display: flex;

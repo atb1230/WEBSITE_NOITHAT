@@ -141,5 +141,12 @@ namespace demo_02.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult SearchByNam(string name)
+        {
+            //truy vấn các sản phẩm có tên chứa từ khóa name
+            List<Product> productList = db.Products.Where(x => x.NameProduct.Contains(name)).ToList();
+            return View(productList);
+        }
     }
 }

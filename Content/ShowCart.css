@@ -21,15 +21,38 @@
 }
 
 .vat {
-    color: #000;
+    color: #b19579;
     text-align: end;
 }
 
 .prices__value {
     font-weight: 600;
+    font-size: 18px;
+    color: #b19579;
 }
-
+span.prices__text{
+    font-size: 18px;
+    color:#b19579;
+}
 /*td img {
     max-width: 100%;
 }
 */
+.ProductsList .table {
+    width: 100%;
+    max-width: 100%;
+    font-size: medium;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    color: #b19579;
+}
+
+
+button.btn-Buy {
+    background-color: #b19579;
+    border: none;
+}
+button.btn-Buy a{
+    color:#fff;
+    font-size:18px;
+}

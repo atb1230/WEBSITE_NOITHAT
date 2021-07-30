@@ -57,6 +57,39 @@ namespace demo_02
                     "~/Content/bootstrap.min.css",
                     "~/Content/aboutusSite.css"));
 
+
+            bundles.Add(new ScriptBundle("~/bundles/script_furniture").Include(
+                      "~/Scripts/js/jquery-2.1.4.min.js",
+
+                        "~/Scripts/js/jquery.magnific-popup.js",
+                        "~/Scripts/js/minicart.js",
+                        //"~/Scripts/js/SmoothScroll.min.js",
+                        "~/Scripts/js/move-top.js",
+                        "~/Scripts/js/easing.js",
+
+                        //"~/Scripts/js/jquery-ui.js",
+
+                        "~/Scripts/js/imagezoom.js",
+                        "~/Scripts/js/jquery.flexslider.js",
+                        "~/Scripts/js/jquery.flexisel.js",
+                        "~/Scripts/js/bootstrap.js"
+                       ));
+
+            bundles.Add(new ScriptBundle("~/bundles/furniture_detail").Include(
+                      "~/Scripts/js/jquery-2.1.4.min.js",
+
+                        "~/Scripts/js/jquery.magnific-popup.js",
+                        "~/Scripts/js/imagezoom.js",
+                        "~/Scripts/js/jquery.flexisel.js"
+                       ));
+
+            bundles.Add(new StyleBundle("~/Content/furniture_css").Include(
+                      "~/Content/css/bootstrap.css",
+                      "~/Content/css/style.css",
+                      "~/Content/css/popuo-box.css",
+                      "~/Content/css/jquery-ui1.css"
+                      /*"~/Content/css/flexslider.css"*/));
+
         }
     }
 }

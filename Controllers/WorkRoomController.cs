@@ -17,7 +17,7 @@ namespace demo_02.Controllers
         {
             var product = db.Products
                 .Include(p => p.Room)
-                .Where(p => p.IdRoom == 4);
+                .Where(p => p.IdRoom == 3);
             return View(product.ToList());
         }
 

@@ -63,3 +63,13 @@ img.img-pro {
         font-family: "Josefin Sans",sans-serif;
         line-height: 25px;
     }
+
+
+    /*DETAILS PRODUCTS*/
+.h3, h3 {
+    font-size: 20px;
+}
+
+li.name-product {
+    color: black;
+}

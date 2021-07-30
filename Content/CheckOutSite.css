@@ -16,3 +16,41 @@
 form input[type=email] {
     width: 726px;
 }
+.Info-bill {
+    font-size: large;
+    color: #fff;
+}
+h4.mb-3 {
+    font-size: large;
+    color: #b19579;
+}
+.mb-3 {
+    font-size: large;
+    color: #b19579;
+}
+.Total-bill {
+    font-size: large;
+    color: #b19579;
+}
+button.btn-Pay {
+    font-size: large;
+    
+    background: #b19579;
+}
+
+a {
+    color: #fafcff;
+    text-decoration: none;
+    background-color: transparent;
+    /*-webkit-text-decoration-skip: objects;*/
+}
+
+.span.text-muted {
+    color: #b19579;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    color: #b19579;
+}
